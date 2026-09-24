@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { projects } from '../data/projects'
 import { profile } from '../data/profile'
 import { ProjectCard } from './ProjectCard'
+import { Link } from 'react-router-dom'
 
 export function ProjectsSection() {
   return (
@@ -35,14 +36,14 @@ export function ProjectsSection() {
           transition={{ duration: 0.5, delay: 0.1, ease: 'easeOut' }}
           className="mt-14 flex justify-center"
         >
-          <a
-            href={profile.githubUrl}
+          <Link
+            to={profile.githubUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full bg-gradient-to-r from-violet-500 to-indigo-500 px-7 py-3.5 text-sm font-medium text-white shadow-lg shadow-violet-500/25 transition-opacity hover:opacity-90"
+            className="rounded-full bg-linear-to-r from-violet-500 to-indigo-500 px-7 py-3.5 text-sm font-medium text-white shadow-lg shadow-violet-500/25 transition-opacity hover:opacity-90"
           >
             Discover more projects
-          </a>
+          </Link>
         </motion.div>
       </div>
     </section>

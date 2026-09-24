@@ -17,5 +17,6 @@ export const skills: Skill[] = [
   { label: 'Node.js', icon: '/svg/nodejs.svg', categoryId: 'backend', level: 82 },
   { label: 'Express.js', icon: '/svg/express.svg', categoryId: 'backend', level: 80 },
   { label: 'PostgreSQL', icon: '/svg/postgresql.svg', categoryId: 'database', level: 78 },
+  { label: 'MongoDB', icon: '/svg/mongodb.svg', categoryId: 'database', level: 75 },
   { label: 'Prisma', icon: '/svg/prisma.svg', categoryId: 'database', level: 76 },
 ]

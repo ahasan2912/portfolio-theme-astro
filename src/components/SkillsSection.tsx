@@ -80,7 +80,7 @@ export function SkillsSection() {
                   aria-pressed={selected}
                   className={
                     selected
-                      ? 'rounded-full bg-gradient-to-r from-violet-500 to-indigo-500 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-violet-500/25'
+                      ? 'rounded-full bg-linear-to-r from-violet-500 to-indigo-500 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-violet-500/25'
                       : 'rounded-full border border-white/10 bg-card px-4 py-2 text-sm font-medium text-zinc-300 transition-all duration-200 hover:-translate-y-0.5 hover:border-violet-400/50 hover:shadow-md hover:shadow-violet-500/10 hover:text-violet-300'
                   }
                 >

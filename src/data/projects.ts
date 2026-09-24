@@ -1,3 +1,8 @@
+import yeep_ads from '../assect/yeep_ads1.jpg';
+import blood_donation from '../assect/blood_donation.jpg';
+import medical_store from '../assect/medical_store.jpg';
+import by_cycle from '../assect/by_cycle_BD.jpg';
+
 export interface Project {
   title: string
   slug: string
@@ -9,7 +14,8 @@ export interface Project {
   github: string
   preview: string
   from: string
-  to: string
+  to: string,
+  image?: string
 }
 
 export const projects: Project[] = [
@@ -25,10 +31,11 @@ export const projects: Project[] = [
       'Live performance dashboard with spend, impressions, and conversion charts',
       'Role-based access for managers, editors, and viewers',
     ],
-    technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Recharts', 'REST API'],
+    image: yeep_ads,
+    technologies: ['React', 'Redux & RTK Query', 'REST API', 'FCM Notifications', 'Tailwind CSS', 'Recharts', 'React Toastify', 'Lucide React', 'Git & GitHub' ],
     category: 'Advertising',
-    github: 'https://github.com/yourname',
-    preview: 'https://example.com',
+    github: 'https://github.com/ahasan2912/yepp_frontend',
+    preview: 'https://yeppads.com',
     from: '#7c5cff',
     to: '#241a38',
   },
@@ -44,7 +51,8 @@ export const projects: Project[] = [
       'Match notifications when a nearby request matches your blood type',
       'Hospital verification workflow for official requests',
     ],
-    technologies: ['React', 'TypeScript', 'Mapbox', 'Tailwind CSS', 'Node.js'],
+    image: blood_donation,
+    technologies: ['React', 'Express', 'MongoDB', 'REST API', 'Nodemailer', 'TanStack Query', 'Firebase', 'Tailwind CSS', 'Recharts', 'React Toastify', 'Lucide React', 'Git & GitHub' ],
     category: 'Healthcare',
     github: 'https://github.com/yourname',
     preview: 'https://example.com',
@@ -63,6 +71,7 @@ export const projects: Project[] = [
       'Cart and checkout flow with order tracking',
       'Wishlist and reorder for returning customers',
     ],
+    image: medical_store,
     technologies: ['React', 'TypeScript', 'Redux Toolkit', 'Tailwind CSS', 'Express'],
     category: 'E-commerce',
     github: 'https://github.com/yourname',
@@ -82,6 +91,7 @@ export const projects: Project[] = [
       'Listing builder with guided photo and spec entry',
       'Direct buyer-to-seller messaging thread',
     ],
+    image: by_cycle,
     technologies: ['React', 'TypeScript', 'TanStack Query', 'Tailwind CSS', 'Supabase'],
     category: 'Marketplace',
     github: 'https://github.com/yourname',

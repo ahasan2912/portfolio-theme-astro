@@ -4,6 +4,7 @@ import { Link, useParams } from 'react-router-dom'
 import { projects } from '../data/projects'
 import { ProjectVisual } from '../components/ProjectVisual'
 import { NotFound } from './NotFound'
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'
 
 function routeTo(index: number) {
   const total = projects.length
@@ -111,7 +112,7 @@ export function ProjectPage() {
             transition={{ duration: 0.5, delay: 0.15, ease: 'easeOut' }}
             className="lg:mt-24"
           >
-            <div className="rounded-xl border border-white/10 bg-card p-6">
+            <div className="rounded-xl border border-white/10 bg-card p-3 mt-38">
               <h2 className="font-display text-sm font-semibold uppercase tracking-wider text-zinc-500">
                 Tech stack
               </h2>
@@ -132,7 +133,7 @@ export function ProjectPage() {
                 to={`/projects/${prev}`}
                 className="group flex min-w-0 flex-col gap-1 rounded-lg p-2 transition-colors hover:bg-white/5"
               >
-                <span className="text-xs text-zinc-500">Previous</span>
+                <div className="text-sm text-zinc-500 flex items-center gap-2"><FaArrowLeft size={13} /> Previous</div>
                 <span className="truncate text-sm font-medium text-zinc-300 transition-colors group-hover:text-white">
                   {projects.find((p) => p.slug === prev)?.title}
                 </span>
@@ -141,7 +142,9 @@ export function ProjectPage() {
                 to={`/projects/${next}`}
                 className="group flex min-w-0 flex-col items-end gap-1 rounded-lg p-2 transition-colors hover:bg-white/5"
               >
-                <span className="text-xs text-zinc-500">Next</span>
+                <div className="text-sm text-zinc-500 flex items-center gap-2">
+                  Next<FaArrowRight size={13} />
+                </div>
                 <span className="truncate text-sm font-medium text-zinc-300 transition-colors group-hover:text-white">
                   {projects.find((p) => p.slug === next)?.title}
                 </span>

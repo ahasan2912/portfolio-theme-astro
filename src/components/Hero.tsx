@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion'
 import { profile } from '../data/profile'
 import { experience } from '../data/experience'
+import { Link } from 'react-router-dom'
+import { IoMdDownload } from 'react-icons/io'
 
 export function Hero() {
   return (
@@ -32,9 +34,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.15, ease: 'easeOut' }}
           className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-zinc-400 sm:text-lg">
-          01 year of experience building responsive, accessible web applications as{' '}
-          {experience.role} at {experience.company} ({experience.period}). I turn ideas into
-          fast, polished interfaces with React, Next.js and TypeScript.
+         Frontend Developer specializing in React, Next.js, and TypeScript, with 01 year of professional experience building responsive and accessible web applications at Beup Tech Agency (Oct 2025 – Jul 2026).
         </motion.p>
 
         <motion.div
@@ -43,18 +43,19 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.3, ease: 'easeOut' }}
           className="mt-10 flex flex-wrap items-center justify-center gap-4"
         >
-          <a
-            href="#projects"
-            className="rounded-full bg-linear-to-r from-violet-500 to-indigo-500 px-6 py-3 text-sm font-medium text-white shadow-lg shadow-violet-500/25 transition-opacity hover:opacity-90"
+          <Link
+            to="#"
+            className="rounded-full bg-linear-to-r from-violet-500 to-indigo-500 px-6 py-3 text-sm font-medium text-white shadow-lg shadow-violet-500/25 transition-opacity hover:opacity-90 flex items-center"
           >
-            View my work
-          </a>
-          <a
-            href="#contact"
+            <IoMdDownload size={20} />
+            Download Resume
+          </Link>
+          <Link
+            to="#projects"
             className="rounded-full border border-white/15 px-6 py-3 text-sm font-medium text-zinc-300 transition-colors hover:border-white/30 hover:text-white"
           >
-            Get in touch
-          </a>
+            View my work
+          </Link>
         </motion.div>
       </div>
     </section>

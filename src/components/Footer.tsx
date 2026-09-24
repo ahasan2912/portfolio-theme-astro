@@ -2,6 +2,7 @@ import { useState, type FormEvent } from 'react'
 import { Link } from 'react-router-dom'
 import { profile } from '../data/profile'
 import { LogoMark } from './LogoMark'
+import { MdEmail } from 'react-icons/md'
 
 export function Footer() {
   const [email, setEmail] = useState('')
@@ -88,7 +89,7 @@ export function Footer() {
                   </Link>
                   <Link
                     to={`#`}
-                    className="text-sm text-zinc-400 transition-colors hover:text-white">
+                    className="text-sm text-zinc-400 transition-colors hover:text-white flex items-center gap-1">
                     {'Email: ahasanhabib2912@gmail.com'}
                   </Link>
                   <Link

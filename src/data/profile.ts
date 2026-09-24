@@ -15,8 +15,8 @@ export interface Profile {
 
 export const profile: Profile = {
   name: 'Ahasan Habib',
-  title: 'Frontend Engineer',
-  email: 'hello@example.com',
+  title: 'Frontend Developer',
+  email: 'ahasanhabib2912@gmail.com',
   githubUrl: 'https://github.com/ahasan2912',
   linkedinUrl: 'https://www.linkedin.com/in/ahasanhabib2912',
   facebookUrl: 'https://www.facebook.com/mdahashanhabib.siam',

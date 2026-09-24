@@ -29,7 +29,7 @@ export function Header() {
       <div className="mx-auto flex h-16 max-w-300 items-center justify-between px-6">
         <Link to="/" className="flex items-center gap-2.5" aria-label="Ahasan Habib — home">
           <LogoMark />
-          <span className="font-display text-lg font-semibold text-white">Ahasan Habib</span>
+          <span className="font-display text-xl font-semibold text-white">Ahasan Habib</span>
         </Link>
 
         <nav aria-label="Primary" className="hidden md:block">
