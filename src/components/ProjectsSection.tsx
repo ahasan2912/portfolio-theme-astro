@@ -5,8 +5,8 @@ import { ProjectCard } from './ProjectCard'
 
 export function ProjectsSection() {
   return (
-    <section id="projects" className="border-b border-white/10 py-20 sm:py-24">
-      <div className="mx-auto max-w-[1200px] px-6">
+    <section id="projects" className="border-b border-white/10 py-8 sm:py-10 lg:py-18">
+      <div className="mx-auto max-w-300 px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

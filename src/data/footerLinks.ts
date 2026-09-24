@@ -1,6 +1,8 @@
 export interface FooterLink {
   label: string
-  href: string
+  href?: string
+  number?: string
+  email?: string
 }
 
 export interface FooterColumn {
@@ -21,12 +23,13 @@ export const footerColumns: FooterColumn[] = [
   {
     heading: 'Connect',
     links: [
-      { label: 'GitHub', href: 'https://github.com/yourname' },
-      { label: 'LinkedIn', href: 'https://linkedin.com/in/yourname' },
-      { label: 'Email', href: 'mailto:hello@example.com' },
+      { label: 'GitHub', href: 'https://github.com/ahasan2912' },
+      { label: 'LinkedIn', href: 'https://www.linkedin.com/in/ahasanhabib2912' },
+      { label: 'Mobile', number: '+8801796905988' },
+      { label: 'Email', email: 'ahasanhabib2912@gmail.com' },
     ],
   },
-  {
+  /* {
     heading: 'Frontend',
     links: [
       { label: 'React', href: '#skills' },
@@ -43,5 +46,5 @@ export const footerColumns: FooterColumn[] = [
       { label: 'PostgreSQL', href: '#skills' },
       { label: 'Prisma', href: '#skills' },
     ],
-  },
+  }, */
 ]

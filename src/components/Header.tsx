@@ -4,15 +4,14 @@ import { Menu, X } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { profile } from '../data/profile'
 import { LogoMark } from './LogoMark'
+import { FaFacebook, FaGithub, FaLinkedin } from 'react-icons/fa'
 
 const navLinks = [
   { label: 'Home', to: '/#home' },
   { label: 'Projects', to: '/#projects' },
   { label: 'Skills', to: '/#skills' },
-  { label: 'Contact', to: '/#contact' },
+  { label: 'Contact', to: '/#footer' },
 ]
-
-const githubPath = profile.socials.find((s) => s.label === 'GitHub')?.path ?? ''
 
 export function Header() {
   const [open, setOpen] = useState(false)
@@ -27,10 +26,10 @@ export function Header() {
 
   return (
     <header className="border-b border-white/10 bg-bg/80 backdrop-blur-md">
-      <div className="mx-auto flex h-16 max-w-[1200px] items-center justify-between px-6">
-        <Link to="/#home" className="flex items-center gap-2.5" aria-label="Ahasan Habib — home">
+      <div className="mx-auto flex h-16 max-w-300 items-center justify-between px-6">
+        <Link to="/" className="flex items-center gap-2.5" aria-label="Ahasan Habib — home">
           <LogoMark />
-          <span className="font-display text-base font-semibold text-white">Ahasan Habib</span>
+          <span className="font-display text-lg font-semibold text-white">Ahasan Habib</span>
         </Link>
 
         <nav aria-label="Primary" className="hidden md:block">
@@ -39,7 +38,7 @@ export function Header() {
               <li key={link.to}>
                 <Link
                   to={link.to}
-                  className="text-sm text-zinc-400 transition-colors hover:text-white"
+                  className="text-base text-zinc-400 transition-colors hover:text-white"
                 >
                   {link.label}
                 </Link>
@@ -49,17 +48,30 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <a
-            href={profile.githubUrl}
+          <Link
+            to={profile.githubUrl}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub profile"
-            className="hidden h-9 w-9 items-center justify-center rounded-lg text-zinc-400 transition-colors hover:bg-white/5 hover:text-white md:flex"
-          >
-            <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5 fill-current">
-              <path d={githubPath} />
-            </svg>
-          </a>
+            className="hidden h-9 w-9 items-center justify-center rounded-full text-zinc-400 transition-colors hover:bg-white/5 hover:text-white md:flex">
+            <FaGithub size={22} />
+          </Link>
+          <Link
+            to={profile.linkedinUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub profile"
+            className="hidden h-9 w-9 items-center justify-center rounded-full text-zinc-400 transition-colors hover:bg-white/5 hover:text-white md:flex">
+            <FaLinkedin size={22} />
+          </Link>
+          <Link
+            to={profile.facebookUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub profile"
+            className="hidden h-9 w-9 items-center justify-center rounded-full text-zinc-400 transition-colors hover:bg-white/5 hover:text-white md:flex">
+            <FaFacebook size={22} />
+          </Link>
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
@@ -68,7 +80,7 @@ export function Header() {
             aria-label={open ? 'Close menu' : 'Open menu'}
             className="flex h-9 w-9 items-center justify-center rounded-lg text-zinc-400 transition-colors hover:bg-white/5 hover:text-white md:hidden"
           >
-            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
       </div>

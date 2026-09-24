@@ -2,7 +2,7 @@
 
 @theme {
   --font-sans: "Inter Variable", -apple-system, system-ui, "Segoe UI", Roboto, sans-serif;
-  --font-display: "Outfit Variable", "Inter Variable", -apple-system, system-ui, sans-serif;
+  --font-display: "Roboto Mono", monospace;
 
   --color-bg: #0c0c0f;
   --color-card: #17171b;
