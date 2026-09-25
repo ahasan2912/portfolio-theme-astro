@@ -6,7 +6,7 @@ import { ProjectVisual } from './ProjectVisual'
 function initials(title: string) {
   return title
     .split(/\s+/)
-    .map((w) => w[0])
+    .map((word) => word[0])
     .slice(0, 2)
     .join('')
     .toUpperCase()
@@ -19,23 +19,23 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-60px' }}
       transition={{ duration: 0.5, delay: index * 0.06, ease: 'easeOut' }}
-      className="group flex flex-col overflow-hidden rounded-xl border border-white/10 bg-card transition-all duration-300 hover:-translate-y-1 hover:border-white/20 hover:bg-card-hover"
+      className="group flex flex-col overflow-hidden rounded-xl border border-border bg-card transition-all duration-300 hover:-translate-y-1 hover:border-border-strong hover:bg-card-hover"
     >
       <Link
         to={`/projects/${project.slug}`}
-        className="flex flex-col focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/60"
+        className="flex flex-col focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg"
         aria-label={`View ${project.title} project details`}
       >
         <ProjectVisual project={project} />
 
         <div className="flex flex-1 flex-col p-5">
-          <h3 className="font-display text-lg font-semibold text-white transition-colors group-hover:text-violet-300">
+          <h3 className="font-display text-lg font-semibold text-text transition-colors group-hover:text-accent">
             {project.title}
           </h3>
-          <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-zinc-400">{project.tagline}</p>
+          <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-muted">{project.tagline}</p>
 
           <div className="mt-auto pt-5">
-            <div className="border-t border-white/10 pt-4">
+            <div className="border-t border-border pt-4">
               <div className="flex items-center justify-between gap-3">
                 <div className="flex min-w-0 items-center gap-2.5">
                   <span
@@ -44,11 +44,9 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
                   >
                     {initials(project.title)}
                   </span>
-                  <span className="truncate text-sm font-medium text-zinc-300">
-                    {project.category}
-                  </span>
+                  <span className="truncate text-sm font-medium text-muted">{project.category}</span>
                 </div>
-                <span className="shrink-0 rounded-full bg-amber-400/15 px-2.5 py-1 text-xs font-medium text-amber-400">
+                <span className="shrink-0 rounded-full bg-amber-400/15 px-2.5 py-1 text-xs font-medium text-badge">
                   Web App
                 </span>
               </div>

@@ -1,11 +1,15 @@
 {
   "name": "portfolio",
   "private": true,
+  "engines": {
+    "node": ">=22.18"
+  },
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "test": "node --experimental-strip-types --test src/lib/theme.test.mjs src/lib/scroll.test.mjs",
     "lint": "oxlint",
     "preview": "vite preview"
   },

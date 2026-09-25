@@ -4,6 +4,27 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Keep this pre-paint bootstrap in sync with src/lib/theme.ts. -->
+    <script>
+      (() => {
+        const storageKey = 'portfolio-theme'
+        let savedTheme = null
+
+        try {
+          savedTheme = window.localStorage.getItem(storageKey)
+        } catch {}
+
+        const theme =
+          savedTheme === 'light' || savedTheme === 'dark'
+            ? savedTheme
+            : window.matchMedia('(prefers-color-scheme: dark)').matches
+              ? 'dark'
+              : 'light'
+
+        document.documentElement.dataset.theme = theme
+        document.documentElement.style.colorScheme = theme
+      })()
+    </script>
     <title>Ahasan Habib | Frontend Engineer</title>
     <meta
       name="description"

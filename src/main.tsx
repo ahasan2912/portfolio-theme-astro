@@ -8,7 +8,6 @@ import { Layout } from './Layout'
 import { HomePage } from './pages/HomePage'
 import { ProjectPage } from './pages/ProjectPage'
 import { NotFound } from './pages/NotFound'
-
 const router = createBrowserRouter([
   {
     path: '/',

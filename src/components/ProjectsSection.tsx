@@ -6,18 +6,18 @@ import { Link } from 'react-router-dom'
 
 export function ProjectsSection() {
   return (
-    <section id="projects" className="border-b border-white/10 py-8 sm:py-10 lg:py-18">
-      <div className="mx-auto max-w-300 px-6">
+    <section id="projects" className="border-b border-border py-8 sm:py-10 lg:py-18">
+      <div className="mx-auto max-w-300 px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
           transition={{ duration: 0.5, ease: 'easeOut' }}
         >
-          <h2 className="font-display text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+          <h2 className="font-display text-3xl font-semibold tracking-tight text-text sm:text-4xl">
             Featured projects
           </h2>
-          <p className="mt-3 max-w-2xl text-base text-zinc-400">
+          <p className="mt-3 max-w-2xl text-base text-muted">
             A selection of applications I have designed and built — each one shipped with a focus
             on performance, accessibility, and clean UI.
           </p>

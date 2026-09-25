@@ -1,6 +1,6 @@
 # Ahasan Habib — Frontend Engineer Portfolio
 
-A dark, single-page portfolio closely following the visual design of the
+A responsive, light/dark single-page portfolio closely following the visual design of the
 [astro.build themes directory](https://astro.build/themes/?search=&categories%5B%5D=portfolio),
 rebuilt with React, TypeScript, Vite, and Tailwind CSS.
 
@@ -20,6 +20,7 @@ npm run dev      # start dev server
 npm run build    # type-check + production build
 npm run preview  # preview the production build
 npm run lint     # oxlint
+npm test         # theme and scroll helper tests
 ```
 
 ## Structure
@@ -27,10 +28,10 @@ npm run lint     # oxlint
 ```
 src/
   data/          # all content (profile, projects, skills, categories, footer links, experience)
-  components/    # Header, Hero, ProjectCard, ProjectsSection, CategoryCard,
-                 # SkillsSection, ContactCta, Footer, LogoMark
-  lib/cn.ts      # tiny class-name helper
-  App.tsx        # page composition
+  components/    # Header, ThemeToggle, Hero, project and skills sections,
+                 # ScrollToTopButton, Footer, LogoMark
+  lib/           # theme.ts, scroll.ts, and cn.ts helpers
+  main.tsx       # app entry and router
   index.css      # theme tokens, fonts, global styles
 ```
 

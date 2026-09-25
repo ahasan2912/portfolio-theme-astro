@@ -10,20 +10,46 @@ export function SkillCard({ skill, category }: { skill: Skill; category: string 
       exit={{ opacity: 0, scale: 0.94 }}
       whileHover={{ y: -3, scale: 1.02 }}
       transition={{ duration: 0.25, ease: 'easeOut' }}
-      className="group flex items-center gap-4 rounded-xl border border-white/10 bg-card p-4 transition-[box-shadow,border-color,background-color] duration-300 hover:border-white/20 hover:bg-card-hover hover:shadow-lg hover:shadow-violet-500/10 sm:p-5"
+      className="
+        group grid grid-cols-[auto_minmax(0,1fr)]
+        items-center gap-3
+        rounded-xl border border-border
+        bg-card p-3
+        transition-[box-shadow,border-color,background-color]
+        duration-300
+        hover:border-border-strong
+        hover:bg-card-hover
+        hover:shadow-lg
+        hover:shadow-violet-500/10  
+        sm:gap-4 sm:p-5
+  "
     >
-      <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg border border-white/10 bg-white/5 transition-colors duration-300 group-hover:border-violet-400/40">
-        <img src={skill.icon} alt={`${skill.label} logo`} className="h-6 w-6" />
+      <span
+        className="
+      grid h-10 w-10 shrink-0 place-items-center
+      rounded-lg border border-border
+      bg-surface-muted
+      transition-colors duration-300
+      group-hover:border-violet-400/40
+      sm:h-11 sm:w-11
+    "
+      >
+        <img
+          src={skill.icon}
+          alt={`${skill.label} logo`}
+          className="h-5 w-5 sm:h-6 sm:w-6"
+        />
       </span>
 
-      <div className="min-w-0 flex-1">
-        <h3 className="truncate text-[15px] font-semibold text-white">{skill.label}</h3>
-        <p className="mt-0.5 truncate text-xs text-zinc-400">{category}</p>
+      <div className="min-w-0">
+        <h3 className="truncate text-sm font-semibold text-text sm:text-[15px]">
+          {skill.label}
+        </h3>
+
+        <p className="mt-0.5 truncate text-[11px] text-muted sm:text-xs">
+          {category}
+        </p>
       </div>
-
-      <span className="shrink-0 rounded-full border border-white/10 bg-white/5 px-2.5 py-1 font-mono text-sm font-semibold text-violet-300 transition-colors duration-300 group-hover:border-violet-400/40">
-        {skill.level}%
-      </span>
     </motion.div>
   )
 }
