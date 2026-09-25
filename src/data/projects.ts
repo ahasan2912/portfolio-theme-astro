@@ -2,6 +2,7 @@ import yeep_ads from '../assect/yeep_ads1.jpg';
 import blood_donation from '../assect/blood_donation.jpg';
 import medical_store from '../assect/medical_store.jpg';
 import by_cycle from '../assect/by_cycle_BD.jpg';
+import benchmark_monitoring from '../assect/movement_monitoring.jpg';
 
 export interface Project {
   title: string
@@ -32,12 +33,45 @@ export const projects: Project[] = [
       'Role-based access for managers, editors, and viewers',
     ],
     image: yeep_ads,
-    technologies: ['React', 'Redux & RTK Query', 'REST API', 'FCM Notifications', 'Tailwind CSS', 'Recharts', 'React Toastify', 'Lucide React', 'Git & GitHub' ],
+    technologies: ['React.js', 'Redux & RTK Query', 'REST API', 'FCM Notifications', 'Tailwind CSS', 'Recharts', 'React Toastify', 'Lucide React', 'Git & GitHub'],
     category: 'Advertising',
     github: 'https://github.com/ahasan2912/yepp_frontend',
     preview: 'https://yeppads.com',
     from: '#7c5cff',
     to: '#241a38',
+  },
+  {
+    title: 'Benchmark Monitoring',
+    slug: 'benchmark-monitoring',
+    tagline: 'A platform for monitoring structural movement and generating analytical reports.',
+    description:
+      'Benchmark Monitoring is a web-based platform designed to track movement across construction sites, structural conditions, infrastructure projects, and geotechnical surveys. The system establishes baseline readings for a structure and compares them with subsequent inspection data to identify shifts and coordinate deviations. Based on predefined movement thresholds, the platform categorizes structural conditions as Normal, Warning, or Alert. I developed the frontend using React.js and Tailwind CSS, implementing responsive dashboards, data visualization, baseline and inspection data comparison, API integrations, and PDF report generation workflows with Redux, RTK Query, and React Hook Form.',
+    features: [
+      'Baseline and subsequent inspection data comparison',
+      'Structural movement and coordinate deviation analysis',
+      'Automatic Normal, Warning, and Alert status visualization',
+      'Interactive dashboards with graphical data analysis',
+      'Comprehensive PDF report generation and viewing',
+      'Project and survey data management through dashboard interfaces',
+      'REST API integration for real-time project and report data',
+    ],
+    image: benchmark_monitoring,
+    technologies: [
+      'React.js',
+      'Tailwind CSS',
+      'Redux',
+      'RTK Query',
+      'React Hook Form',
+      'REST API',
+      'Data Visualization',
+      'PDF Generation',
+      'Git & GitHub',
+    ],
+    category: 'Monitoring & Analytics',
+    github: '',
+    preview: '',
+    from: '#0f766e',
+    to: '#042f2e',
   },
   {
     title: 'BloodLink',
@@ -52,7 +86,7 @@ export const projects: Project[] = [
       'Hospital verification workflow for official requests',
     ],
     image: blood_donation,
-    technologies: ['React', 'Express', 'MongoDB', 'REST API', 'Nodemailer', 'TanStack Query', 'Firebase', 'Tailwind CSS', 'Recharts', 'React Toastify', 'Lucide React', 'Git & GitHub' ],
+    technologies: ['React.js', 'Express.js', 'MongoDB', 'REST API', 'Nodemailer', 'TanStack Query', 'Firebase', 'Tailwind CSS', 'Recharts', 'React Toastify', 'Lucide React', 'Git & GitHub'],
     category: 'Healthcare',
     github: 'https://github.com/yourname',
     preview: 'https://example.com',
