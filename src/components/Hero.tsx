@@ -45,13 +45,13 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.3, ease: 'easeOut' }}
           className="mt-10 flex flex-wrap items-center justify-center gap-4"
         >
-          <Link
-            to="#"
+          <a
+            href="Ahasan_Habib_Frontend_Developer.pdf" download="Ahasan's Resume.pdf"
             className="flex items-center rounded-full bg-linear-to-r from-violet-500 to-indigo-500 px-6 py-3 text-sm font-medium text-white shadow-lg shadow-violet-500/25 transition-opacity hover:opacity-90"
           >
             <IoMdDownload size={20} aria-hidden="true" />
             Download Resume
-          </Link>
+          </a>
           <Link
             to="#projects"
             className="rounded-full border border-border-strong px-6 py-3 text-sm font-medium text-muted transition-colors hover:border-border-strong hover:text-text"
