@@ -20,11 +20,11 @@ export function ProjectPage() {
   }
 
   const project = projects[index]
-  const { next, prev } = routeTo(index)
+  const { next, prev } = routeTo(index);
 
   return (
     <article className="border-b border-white/10">
-      <div className="mx-auto max-w-[1200px] px-6 py-16 sm:py-20">
+      <div className="mx-auto max-w-300 px-6 py-5 sm:py-20">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
@@ -32,8 +32,7 @@ export function ProjectPage() {
         >
           <Link
             to="/#projects"
-            className="inline-flex items-center gap-2 text-sm text-zinc-400 transition-colors hover:text-white"
-          >
+            className="inline-flex items-center gap-2 text-sm text-zinc-400 transition-colors hover:text-white">
             <ArrowLeft className="h-4 w-4" />
             Back to projects
           </Link>
@@ -62,24 +61,24 @@ export function ProjectPage() {
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
-              <a
-                href={project.preview}
+              <Link
+                to={project.preview}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full bg-linear-to-r from-violet-500 to-indigo-500 px-6 py-3 text-sm font-medium text-white shadow-lg shadow-violet-500/25 transition-opacity hover:opacity-90"
               >
                 <ExternalLink className="h-4 w-4" />
                 Live preview
-              </a>
-              <a
-                href={project.github}
+              </Link>
+              <Link
+                to={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full border border-white/15 px-6 py-3 text-sm font-medium text-zinc-300 transition-colors hover:border-white/30 hover:text-white"
               >
                 <FolderGit2 className="h-4 w-4" />
                 View source
-              </a>
+              </Link>
             </div>
 
             <div className="mt-10 overflow-hidden rounded-xl border border-white/10">
@@ -110,9 +109,9 @@ export function ProjectPage() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.15, ease: 'easeOut' }}
-            className="lg:mt-24"
-          >
-            <div className="rounded-xl border border-white/10 bg-card p-3 mt-38">
+            className="lg:mt-60"
+            >
+            <div className="rounded-xl border border-white/10 bg-card p-3">
               <h2 className="font-display text-sm font-semibold uppercase tracking-wider text-zinc-500">
                 Tech stack
               </h2>

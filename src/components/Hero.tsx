@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion'
 import { profile } from '../data/profile'
-import { experience } from '../data/experience'
 import { Link } from 'react-router-dom'
 import { IoMdDownload } from 'react-icons/io'
 
